@@ -80,6 +80,7 @@ Int Range fa0/10-12
  no shutdown
  switchport trunk Encap Dot1Q
  switchport mode trunk
+switchport trunk native vlan 1
  do sh int trunk
 end
 
@@ -172,10 +173,10 @@ config t
 ip routing
 ip dhcp pool CAMERA6
 host 10.42.50.6 255.255.255.0
-client-identifier 001a.0704.7f5b
+client-identifier 001a.070a.24ef
 ip dhcp pool CAMERA8
 host 10.42.50.8 255.255.255.0
-client-identifier 001a.0709.c258 
+client-identifier 001a.0709.c232 
 end
 show ip dhcp binding
 
@@ -250,12 +251,12 @@ ephone-dn 8
 ephone-dn 10
  number 4298
 Ephone 1
-  Mac-address cafe.face.baba
+  Mac-address ccd8.c1fb.02b7
   type 8945
   button 1:8 2:7 3:6 4:5
   restart
 Ephone 2
-  Mac-address fafa.caca.baba
+  Mac-address ccd8.c1fa.dd39
   type 8945
   button 1:4 2:3 3:2 4:1
   restart  
@@ -672,6 +673,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
