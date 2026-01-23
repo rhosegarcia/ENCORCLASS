@@ -295,6 +295,7 @@ ip add 50.0.0.1 255.0.0.0
 end
 
 
+
 @R3 (PH)
 conf t
 hostname R3-PH
@@ -310,6 +311,22 @@ ping 50.0.0.1/3
 !If it pings... #GGWP :)
 
 
+@R2 (PH)
+conf t
+hostname R2-PH
+int g0/0
+no shut
+ip add 60.0.0.2 255.0.0.0
+end
+
+@R4 (PH)
+conf t
+hostname R2-PH
+int g0/0
+no shut
+ip add 60.0.0.4 255.0.0.0
+end
+
 
 !!pwede mo dagdagan extra si R2 and R4 kung palag-palag pa yung PC mo.
 
@@ -321,3 +338,4 @@ no shut
 ip add 50.0.0.2/4 255.0.0.0
 
 end
+
